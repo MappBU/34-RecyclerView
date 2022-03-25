@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/orange"
+        tools:context=".DetailsMovie">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/nameCardMovie"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:textColor="@color/black"
+                android:layout_margin="20dp"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/headerLongCardMovie"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/nameCardMovie"
+                app:layout_constraintStart_toStartOf="parent"
+                android:textColor="@color/black"
+                android:text="@string/longMovie"
+                android:layout_margin="10dp"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/longCardMovie"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/nameCardMovie"
+                app:layout_constraintLeft_toRightOf="@id/headerLongCardMovie"
+                android:textColor="@color/black"
+                android:layout_margin="10dp"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/headerActorsCardMovie"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/longCardMovie"
+                app:layout_constraintStart_toStartOf="parent"
+                android:textColor="@color/black"
+                android:text="@string/actorsMovie"
+                android:layout_margin="10dp"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/actorsCardMovie"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/longCardMovie"
+                app:layout_constraintLeft_toRightOf="@id/headerActorsCardMovie"
+                android:textColor="@color/black"
+                android:layout_margin="10dp"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/headerRatingCardMovie"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/actorsCardMovie"
+                app:layout_constraintStart_toStartOf="parent"
+                android:textColor="@color/black"
+                android:text="@string/ratingMovie"
+                android:layout_margin="10dp"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/ratingCardMovie"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/actorsCardMovie"
+                app:layout_constraintLeft_toRightOf="@id/headerRatingCardMovie"
+                android:textColor="@color/black"
+                android:layout_margin="10dp"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </FrameLayout>
+
+</layout>
