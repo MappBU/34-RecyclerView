@@ -1,14 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout
+    xmlns:tools="http://schemas.android.com/tools"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <!-- Создаем чистый виджет. 1 пункта списка. -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <!-- Создаем Материал Карточку -->
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/card"
         android:layout_width="336dp"
         android:layout_height="200dp"
-        android:layout_margin="10dp">
+        android:layout_margin="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="20dp">
 
         <!-- Чтобы внутри карточки расположить элементы, создаем компановщик во всю карточку.
             Сюда ложим бекграунд картинку -->
@@ -90,7 +99,7 @@
                 android:id="@+id/play"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="20dp"
+                android:layout_marginEnd="20dp"
                 android:layout_marginBottom="20dp"
                 android:backgroundTint="@color/orange"
                 android:text="@string/play"
@@ -102,5 +111,7 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </com.google.android.material.card.MaterialCardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </layout>

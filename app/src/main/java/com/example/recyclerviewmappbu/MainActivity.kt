@@ -57,7 +57,7 @@ class MainActivity : AppCompatActivity() {
 
         // По байндингу обращаемся к виджету RecyclerView. Говорим макет будет линейный, сверху вниз, по вертикали. (Стандартный)
         binding?.catalogMovies?.layoutManager = LinearLayoutManager(this)
-        // Инициализируем movieAdapter и передаем наш списочный массив. Эта строчка нужна, потому что работаем с массивом в MovieAdapter.kt
+        // Инициализируем movieAdapter и передаем наш списочный массив movies!!. Эта строчка нужна, потому что работаем с массивом в MovieAdapter.kt
         // Здесь же делаем так, чтобы в MovieAdapter.kt можно было вызвать функцию action из MainActicity
         movieAdapter = MovieAdapter({movieModel: MovieModel->action(movieModel)}, movies!!)
         // По байндингу обращаемся к виджету RecyclerView. И к его адаптеру присваиваем свой адаптер.
